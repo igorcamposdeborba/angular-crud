@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-card-title>Excluir produto</mat-card-title>
+
+    <form>
+        <mat-form-field> <!-- ngModel é o two way data bidding, que coloca os atributos dentro do objeto -->
+            <input matInput placeholder="Nome" [(ngModel)]="product.name" name="name" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)" [(ngModel)]="product.price" name="price" disabled>
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="deleteProduct()" color="warn">
+        Excluir
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+
+</mat-card>

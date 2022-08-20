@@ -1,0 +1,28 @@
+<mat-card>
+    <mat-card-title>Novo produto</mat-card-title>
+
+    <form>
+        <mat-form-field> <!-- ngModel é o two way data bidding, que coloca os atributos dentro do objeto -->
+            <input matInput placeholder="Nome" [(ngModel)]="product.name" name="name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)" [(ngModel)]="product.price" name="price">
+        </mat-form-field>
+    </form>
+
+    <button mat-raised-button (click)="createProduct()" color="primary">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+
+</mat-card>
+
+
+
+<!--
+<p [id]="atributoLegal">product-create works!</p> Alterar id de atributoLegal para qualquer
+
+<button (click)="fazerAlgo()">Fazer algo!</button>--> <!-- chamar método dentro do componente-->
